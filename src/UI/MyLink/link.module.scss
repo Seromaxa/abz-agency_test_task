@@ -1,0 +1,13 @@
+@use '../../assets/styles/mixins.scss';
+
+.link{
+    @include mixins.button-style;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    display: block;
+    margin: auto;
+}
+.link:hover{
+    background: var(--shine-y);
+}

@@ -1,0 +1,21 @@
+@use '../../assets/styles/mixins.scss';
+
+
+.button {
+@include mixins.button-style;
+}
+.wrapper_button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/// Active styles
+
+.button:hover{
+    background: var(--shine-y);
+}
+.button:disabled{
+ background: var(--disbled);
+}

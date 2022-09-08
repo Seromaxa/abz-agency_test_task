@@ -1,0 +1,57 @@
+@use '../../assets/styles/mixins.scss';
+
+//default styles TEXT input
+
+.wrapper{
+height: 72px;
+position: relative;
+margin-bottom: 32px
+}
+
+.label{
+@include mixins.root-text;
+position: absolute;
+top:20%;
+left:3%;
+padding: 0 4px;
+background-color: white;
+transition: all .3s ease-in-out;
+color: var(--label-color);
+}
+.label::first-letter{
+    text-transform: capitalize;
+}
+
+.input{
+@include mixins.root-text;   
+width: 100%; 
+outline: none;    
+border: 1px solid var(--borders);
+border-radius: 4px;
+padding: 14px 0 14px 16px ;
+}
+
+.warning{
+display: block;
+font-size: var(--font-size-s);
+line-height: var(--line-s);
+}
+
+// in action styles
+
+.input.fill ~.label,
+.input:focus ~.label{
+font-size: var(--font-size-s);
+line-height: var(--line-s);
+top:-6px;
+}
+
+// ERROR styles
+
+.input.error{
+    border: 2px solid var(--error);
+}
+.label.error,
+.warning.error{
+    color: var(--error);
+}

@@ -1,0 +1,42 @@
+.header{
+    background: var(--white);
+    
+}
+.wrapper{
+    max-width: var(--screen-max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    
+}
+.logo_wrapper img{
+    width: 100%;
+    height: auto;
+}
+.navigation {
+    width: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+@media screen and (min-width:360px) {
+    .header{
+        padding: 0 16px;
+    }
+}
+@media screen and (min-width:768px) {
+    .header{
+        padding: 0 32px;
+    }
+}
+@media screen and (min-width:1024px)  {
+    .header{
+        padding: 0 60px;
+    }
+}

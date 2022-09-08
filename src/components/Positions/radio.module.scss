@@ -1,0 +1,54 @@
+@use '../../assets/styles/mixins.scss';
+
+.header{
+    margin-top: -7px;
+    margin-bottom: 12px;
+}
+.root_wrapper{
+    height: 150px;
+    margin-bottom: 18px;
+}
+.radio_wrapper{
+    padding: 0 12px;
+    margin-bottom: 7px;
+}
+.radio_input{
+    display: none
+}
+
+.radio_label{
+@include mixins.root-text;
+position: relative;
+padding-left: 20px;
+}
+
+.radio_label::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--secondary);
+    left: -12px;
+}
+.radio_label.error::before{
+        border-color: var(--error);
+}
+.radio_label::after{
+    content: '';
+    position: absolute;
+    display: none;
+    width: 10px;
+    height: 10px;
+    background: var(--secondary);
+    border-radius: 50%;
+    left: -6px;
+    top: 4px
+}
+
+.radio_input:checked ~.radio_label::after{
+    display: block;
+}
+span.error{
+    color: var(--error);
+}

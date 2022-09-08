@@ -1,0 +1,33 @@
+
+.form_width{
+    max-width: 380px;
+    margin: auto;
+}
+
+.main_section_form h1{
+    margin-bottom: 50px;
+}
+.main_section_form{
+    padding-bottom: 100px;
+}
+.img_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (min-width:320px) and (max-width:564px) {
+    .main_section_form{
+        padding: 0 16px;
+    }
+    
+}
+@media screen and (min-width:565px) and (max-width:769px) {
+    .main_section_form{
+        padding: 0 32px;
+    }
+}
+@media screen and (width:1024px)  {
+    .main_section_form{
+        padding: 0 60px;
+    }
+}

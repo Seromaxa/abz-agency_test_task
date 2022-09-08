@@ -1,0 +1,32 @@
+@import "fonts";
+@import "variables";
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--root-font);
+    margin: 0;
+}
+#root{
+    width: 100%;
+    background: var(--root-color);
+}
+
+h1{
+    font: {
+        size: var(--font-size-h);
+        weight: var(--root-weight);
+    };
+    line-height: var(--line-h);
+    text-align: center
+};
+
+p{
+    font: {
+        size: var(--font-size-p);
+        weight: var(--root-weight) 
+    };
+    line-height: var(--line-p);
+}
+

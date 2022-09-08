@@ -1,0 +1,75 @@
+@use '../../assets/styles/mixins.scss';
+
+.main_section{
+    @include mixins.margin-bottom;
+   
+}
+
+.main_section h1{
+    margin-bottom: 50px;
+}
+
+.user_list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 0;
+   
+}
+.user_list li{
+    margin-top: 29px;
+    width: 32.19%;
+}
+.user_list li:nth-child(1),
+.user_list li:nth-child(2),
+.user_list li:nth-child(3){
+margin-top: 0;
+}
+
+.button_width{
+    width: 120px;
+}
+.hide_button{
+    visibility: hidden;
+}
+
+@media screen and (min-width:320px) and (max-width:564px) {
+
+    .user_list li{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .user_list li:nth-child(2),
+    .user_list li:nth-child(3){
+        margin-top: 20px;
+    }
+    .main_section   {
+        padding: 0 16px;
+    }
+    
+}
+@media screen and (min-width:565px) and (max-width:769px) {
+    .user_list li{
+        width: 48%;
+        margin-top: 16px;
+    }
+    .user_list li:nth-child(3){
+        margin-top: 16px;
+    }
+    .main_section{
+        padding: 0 32px;
+    }
+}
+@media screen and (min-width:1024px) {
+    .user_list li{
+        width: 31.195%;
+        
+        
+    }
+    .main_section{
+        padding: 0 60px;
+       
+    }
+}
