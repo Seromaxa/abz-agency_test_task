@@ -14,7 +14,7 @@ const UserList = () =>{
 const page = useSelector(getPage)
 
 const dispatch = useDispatch()
-const {data,isLoading} = useUserListQuery(page)
+const {data,isLoading,isError,error} = useUserListQuery(page)
 const clickHandler = () =>{
     dispatch(setPage(data.page + 1))
 }
@@ -23,6 +23,7 @@ return (
         <h1>Working with GET request</h1>   
     <ul className={styles.user_list} >
     {isLoading ? <Spiner /> : null}
+    {isError ? <div className='response_error'>{error.data.message}</div>:null}
     {data?.users ? data.users.map(item=>{
         return (
            <li key={item.id}> <Card obj={item} /></li>

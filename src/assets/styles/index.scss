@@ -30,3 +30,8 @@ p{
     line-height: var(--line-p);
 }
 
+.response_error{
+    width: 100%;
+    color: var(--error);
+    text-align: center;
+}

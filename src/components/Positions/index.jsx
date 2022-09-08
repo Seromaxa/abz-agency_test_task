@@ -38,7 +38,7 @@ const Positions = ({onChange,errorState}) => {
       }):null}
 
       {errorState?<span className={styles.error}>{errorState}</span>:null}
-      {error?<span className={styles.error}>{error.message}</span>:null}
+      {error?<span className={styles.error}>{error.data.message}</span>:null}
       </div>
       </>
     )
