@@ -84,11 +84,11 @@ export const photoVerify = async (obj) =>{
   if(!imagen){
     return {value:'Upload photo',verify:false}
   }
-   const widthAndheihth = await verifyImagenWH(imagen)
     if(imagen.type !== "image/jpeg"){
      return {veryfy: false,
      value: 'The photo format must be jpeg/jpg type.'}
     }
+    const widthAndheihth = await verifyImagenWH(imagen)
    if(!widthAndheihth){
     throu = false
     errValue = 'Minimum size of photo must be 70 X 70.'
