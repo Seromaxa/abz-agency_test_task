@@ -86,8 +86,8 @@ export const photoVerify = async (obj) =>{
   }
    const widthAndheihth = await verifyImagenWH(imagen)
     if(imagen.type !== "image/jpeg"){
-     throu = false
-     errValue = 'The photo format must be jpeg/jpg type.'
+     return {veryfy: false,
+     value: 'The photo format must be jpeg/jpg type.'}
     }
    if(!widthAndheihth){
     throu = false
